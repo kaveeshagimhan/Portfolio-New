@@ -19,6 +19,8 @@ import { Github, Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Calendar
   Wrench,
   FileCode
 } from 'lucide-react';
+import image from './assets/1000543863new.png';
+import cvFile from './assets/Kaveesha_Gimhan_CV.pdf';
 
 
 function App() {
@@ -100,7 +102,7 @@ function App() {
   const handleDownloadCV = () => {
     // Create a link element and trigger download of your actual CV
     const link = document.createElement('a');
-    link.href = '/Thennakoon TMKG.pdf'; // Your actual CV file in public folder
+    link.href = cvFile; // Your actual CV file in public folder
     link.download = 'Kaveesha_Gimhan_CV.pdf'; // Name for downloaded file
     document.body.appendChild(link);
     link.click();
@@ -232,7 +234,7 @@ function App() {
                 {/* Profile image container - REPLACE IMAGE URL WITH YOUR PHOTO */}
                 <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-8 border-blue-400/30 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 transform">
                   <img 
-                    src="/1000543863new.png" 
+                    src={image} 
                     alt="Kaveesha Gimhan" 
                     className="w-full h-full object-cover"
                   />
